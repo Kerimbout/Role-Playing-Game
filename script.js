@@ -24,7 +24,8 @@ One difference is that objects use properties, or keys, to access and modify dat
 Objects are indicated by curly braces. An empty object would look like {}.
 */
 const locations = [{
-    name: "town square"
+    name: "town square",
+    "button text": ["Go to store","Go to cave","Fight dragon"]
 }];
 
 // initialize buttons
