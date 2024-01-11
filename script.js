@@ -23,10 +23,14 @@ Objects are similar to arrays, but with a few differences.
 One difference is that objects use properties, or keys, to access and modify data.
 Objects are indicated by curly braces. An empty object would look like {}.
 */
-const locations = [{
-    name: "town square",
-    "button text": ["Go to store","Go to cave","Fight dragon"]
-}];
+const locations = [
+    {
+        name: "town square",
+        "button text": ["Go to store", "Go to cave", "Fight dragon"],
+        "button functions": [goStore, goCave, fightDragon],
+        "text": "You are in the town square. You see a sign that says \"Store\"."
+    }
+];
 
 // initialize buttons
 button1.onclick = goStore;
