@@ -18,6 +18,15 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+/*
+Objects are similar to arrays, but with a few differences. 
+One difference is that objects use properties, or keys, to access and modify data.
+Objects are indicated by curly braces. An empty object would look like {}.
+*/
+const locations = [{
+    name: "town square"
+}];
+
 // initialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
