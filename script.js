@@ -44,17 +44,17 @@ button3.onclick = fightDragon;
 
 // Creating functions
 function goTown() {
-    button1.innerText = "Go to store";
+    /*button1.innerText = "Go to store";
     button2.innerText = "Go to cave";
     button3.innerText = "Fight dragon";
     button1.onclick = goStore;
     button2.onclick = goCave;
     button3.onclick = fightDragon;
-    text.innerText = "You are in the town square. You see a sign that says Store.";
+    text.innerText = "You are in the town square. You see a sign that says Store.";*/
 }
 
 function goStore() {
-    const text = document.querySelector("#text");
+    /*const text = document.querySelector("#text");
     text.innerText = "You enter the store.";
 
     button1.innerText = "Buy 10 health (10 gold)";//The innerText property controls the text that appears in an HTML element.
@@ -63,7 +63,7 @@ function goStore() {
 
     button1.onclick = buyHealth;
     button2.onclick = buyWeapon;
-    button3.onclick = goTown;
+    button3.onclick = goTown;*/
 }
 
 function goCave() {
@@ -74,3 +74,12 @@ function fightDragon() {
     console.log("Fighting dragon.");
 }
 
+function update(locations){
+    button1.innerText = "Go to store";
+    button2.innerText = "Go to cave";
+    button3.innerText = "Fight dragon";
+    button1.onclick = goStore;
+    button2.onclick = goCave;
+    button3.onclick = fightDragon;
+    text.innerText = "You are in the town square. You see a sign that says Store.";
+}
