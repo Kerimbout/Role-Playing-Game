@@ -68,10 +68,10 @@ function fightDragon() {
     console.log("Fighting dragon.");
 }
 
-function update(locations){
-    button1.innerText = locations["button text"][0]; //the update function using the (locations) argument I passed.
-    button2.innerText = locations["button text"][1];
-    button3.innerText = locations["button text"][2];
+function update(location){
+    button1.innerText = location["button text"][0]; //the update function using the (location) argument I passed.
+    button2.innerText = location["button text"][1];
+    button3.innerText = location["button text"][2];
     button1.onclick = goStore;
     button2.onclick = goCave;
     button3.onclick = fightDragon;
