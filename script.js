@@ -48,22 +48,23 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+function update(location) {
+    button1.innerText = location["button text"][0]; //the update function using the (location) argument I passed.
+    button2.innerText = location["button text"][1];
+    button3.innerText = location["button text"][2];
+    button1.onclick = goStore;
+    button2.onclick = goCave;
+    button3.onclick = fightDragon;
+    text.innerText = "You are in the town square. You see a sign that says Store.";
+}
+
 // Creating functions
 function goTown() {
     update(locations[0]) //Passing elements of arrays.
 }
 
 function goStore() {
-    /*const text = document.querySelector("#text");
-    text.innerText = "You enter the store.";
-
-    button1.innerText = "Buy 10 health (10 gold)";//The innerText property controls the text that appears in an HTML element.
-    button2.innerText = "Buy weapon (30 gold)";
-    button3.innerText = "Go to town square";
-
-    button1.onclick = buyHealth;
-    button2.onclick = buyWeapon;
-    button3.onclick = goTown;*/
+    update(locations[1]);
 }
 
 function goCave() {
@@ -74,12 +75,7 @@ function fightDragon() {
     console.log("Fighting dragon.");
 }
 
-function update(location) {
-    button1.innerText = location["button text"][0]; //the update function using the (location) argument I passed.
-    button2.innerText = location["button text"][1];
-    button3.innerText = location["button text"][2];
-    button1.onclick = goStore;
-    button2.onclick = goCave;
-    button3.onclick = fightDragon;
-    text.innerText = "You are in the town square. You see a sign that says Store.";
+function buyHealth(){
+    gold = gold - 10; //or gold -= 10;
+    health = health + 10;
 }
