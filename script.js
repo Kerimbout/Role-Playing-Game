@@ -75,7 +75,12 @@ function fightDragon() {
     console.log("Fighting dragon.");
 }
 
-function buyHealth(){
-    gold = gold - 10; //or gold -= 10;
-    health = health + 10;
+function buyHealth() {
+    gold -= 10;
+    const goldText = document.querySelector("#goldText");
+    goldText.innerText = gold;
+
+    health += 10;
+    const healthText = document.querySelector("#healthText");
+    healthText.innerText = health;
 }
