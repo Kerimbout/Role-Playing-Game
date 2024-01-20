@@ -76,11 +76,12 @@ function fightDragon() {
 }
 
 function buyHealth() {
-    gold -= 10;
-    const goldText = document.querySelector("#goldText");
-    goldText.innerText = gold;
-
-    health += 10;
-    const healthText = document.querySelector("#healthText");
-    healthText.innerText = health;
+    if (gold >= 10) {
+        gold -= 10;
+        health += 10;
+        goldText.innerText = gold;
+        healthText.innerText = health;
+    } else {
+        text.innerText = "You do not have enough gold to buy health.";
+    }
 }
