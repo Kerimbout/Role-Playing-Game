@@ -48,10 +48,10 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 const weapons = [
-    {name: "stick", power: 5}, 
-    {name: "dagger", power: 30}, 
-    {name: "claw hammer", power: 50}, 
-    {name: "sword", power: 100}
+    { name: "stick", power: 5 },
+    { name: "dagger", power: 30 },
+    { name: "claw hammer", power: 50 },
+    { name: "sword", power: 100 }
 ];
 
 function update(location) {
@@ -89,5 +89,25 @@ function buyHealth() {
         healthText.innerText = health;
     } else {
         text.innerText = "You do not have enough gold to buy health.";
+    }
+}
+
+function buyWeapon() {
+    if (currentWeapon < weapons.length - 1) {
+        if (gold >= 30) {
+            gold -= 30;
+            currentWeapon++;
+            goldText.innerText = gold;
+            let newWeapon = weapons[currentWeapon].name;
+            text.innerText = "You now have a " + newWeapon + ".";
+            inventory.push(newWeapon);
+            text.innerText += " In your inventory you have: " + inventory;
+        } else {
+            text.innerText = "You do not have enough gold to buy a weapon.";
+        }
+    } else {
+        text.innerText = "You already have the most powerful weapon!";
+        button2.innerText = "Sell weapon for 15 gold";
+        button2.onclick = sellWeapon;
     }
 }
