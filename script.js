@@ -156,4 +156,11 @@ function goFight() {
     update(locations[3]);
     monsterHealth = monsters[fighting].health;
     monsterStats.style.display = "block"; //Display the monsterStats element by updating the display property of the style property to block
+
+    /*
+    Now, set the innerText property of monsterName to be the name property of the current monster. 
+    Do the same for monsterHealthText and the health property. */
+
+    monsterName.innerText = monsters[fighting].name;
+    monsterHealthText.innerText = monsters[fighting].health;
 }
