@@ -142,7 +142,7 @@ function fightSlime() {
     goFight();
 }
 
-function fightBeast()       {
+function fightBeast() {
     fighting = 1;
     goFight();
 }
@@ -150,4 +150,10 @@ function fightBeast()       {
 function fightDragon() {
     fighting = 2;
     goFight();
+}
+
+function goFight() {
+    update(locations[3]);
+    monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block"; //Display the monsterStats element by updating the display property of the style property to block
 }
